@@ -10,6 +10,11 @@ import geminiResponse from "./gemini.js"
 
 
 const app=express()
+const allowedOrigins =
+  process.env.NODE_ENV === "production"
+    ? ["https://jarvis-umks.onrender.com"] // deployed frontend
+    : ["http://localhost:3000"];            // dev frontend
+
 app.use(cors({
     origin:"https://jarvis-umks.onrender.com",
     credentials:true
