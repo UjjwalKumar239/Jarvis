@@ -16,7 +16,7 @@ const allowedOrigins =
     : ["http://localhost:3000"];            // dev frontend
 
 app.use(cors({
-    origin:"https://jarvis-umks.onrender.com",
+    origin:"https://jarvis-j.onrender.com",
     credentials:true
 }))
 const port=process.env.PORT || 5000
